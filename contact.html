@@ -1,0 +1,49 @@
+<!doctype html public>
+<html>
+	<head>
+		<title>PC 4 U</title>
+		<link rel="icon" type="image/gif" href="afbeeldingen/logo.png">
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<div align="center">
+			<img id="logo" src="afbeeldingen/logo.png">
+		</div>
+		
+		<br/>
+		<div class="container">
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Menu</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="index.html">Home Pagina</a>
+				<a href="contact.html">Contact Pagina</a>
+			</div>
+			</div>
+			<h1> Contact</h1>	<br/>
+			<p>&nbsp;Hier kunt u de contact informatie vinden van de PC 4 U eigenaar Ramon Berkhout.&nbsp;<p/>
+			<p>&nbsp;e-mail adres: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="c0b2a1a2a5b2aba8afb5b480aeafb6a1a3afacaca5a7a5eeaeac">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>&nbsp;<p/>
+			<p>&nbsp;Telefoon nummer: 01811037000&nbsp;<p/>
+			<p>&nbsp;Adres: Gedempthamerkanaal 17 2131PZ Amsterdam.&nbsp;<p/> <br/>
+			<div align="center"><img src="afbeeldingen/locatie.png" width="80%"></div>
+		</div>
+			<script language="javascript" type="text/javascript">
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+		</script>
+	</body>
+</html>

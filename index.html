@@ -1,0 +1,102 @@
+<!doctype html public>
+<html>
+	<head>
+		<title>PC 4 U</title>
+		<link rel="icon" type="image/gif" href="afbeeldingen/logo.png">
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<div align="center">
+			<img id="logo" src="afbeeldingen/logo.png">
+		</div>
+		
+		<br/>
+		<div class="container">
+		<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html">Home Pagina</a>
+			<a href="contact.html">Contact Pagina</a>
+		</div>
+		</div>
+		<h1> Welkom op PC 4 U! </h1>        <br/> 
+        <p>&nbsp;Welkom bij PC 4 U, de speciaalzaak die de PC heeft voor al uw benodigdheden!&nbsp;<p/>
+        <p>&nbsp;Stel zelf je de PC samen en bestel voor 16:00 uur om morgen de PC van je dromen kant-en-klaar thuis te ontvangen!&nbsp;<p/>
+        <p>&nbsp;Je hoeft dus niet zelf te gaan sleutelen met onderdelen.&nbsp;<p/>
+		
+		<br/>
+		
+			<!--hier wordt een slideshow gemaakt waarbij de gebruiker de afbeeldingen kan zien
+			en er op kan klikken-->
+			<div class="slideshow-container">
+		
+			<div class="mySlides fade" align="center">
+			<a href="pc1.html">
+			<img src="afbeeldingen/PC1.jpg" style="width:50%">
+			</div>
+			
+			<div class="mySlides fade" align="center">
+			<a href="pc2.html">
+			<img src="afbeeldingen/PC2.jpg" style="width:50%">
+			</div>
+			
+			<div class="mySlides fade" align="center">
+			<a href="pc3.html">
+			<img src="afbeeldingen/PC3.jpg" style="width:50%">
+			</div>
+
+			</br><div align="center"> <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+		<script language="javascript" type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1} 
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none"; 
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block"; 
+		dots[slideIndex-1].className += " active";
+		}
+		
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+			}
+		}
+		}
+		</script>
+	</body>
+</html>
